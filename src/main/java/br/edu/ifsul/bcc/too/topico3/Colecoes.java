@@ -151,10 +151,10 @@ public class Colecoes {
         Aluno a = new Aluno("pf009","telmo");
         list.add(a);
         
-        Aluno b = new Aluno("pf002","junior");
+        Aluno b = new Aluno("pf002","fulano");
         list.add(b);
         
-        Aluno c = new Aluno("pf003","fulano");
+        Aluno c = new Aluno("pf003","junior");
         list.add(c);
         
         System.out.println(list);
@@ -168,9 +168,9 @@ public class Colecoes {
     
     public static void main(String[] args) {
         
-      //  new Colecoes().metodoClassificacaoMap();
+      new Colecoes().metodoClassificacaoMap();
         
-       new Colecoes().metodoClassificacao();
+      // new Colecoes().metodoClassificacao();
         
       //  Colecoes c = new Colecoes(0);
         

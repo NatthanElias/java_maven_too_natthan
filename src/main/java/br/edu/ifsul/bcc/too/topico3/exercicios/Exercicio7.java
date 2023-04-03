@@ -1,6 +1,7 @@
 
 package br.edu.ifsul.bcc.too.topico3.exercicios;
 
+import br.edu.ifsul.bcc.too.topico3.exercicios.respostas.Carro;
 import br.edu.ifsul.bcc.too.topico3.Colecoes;
 import br.edu.ifsul.bcc.too.topico3.util.Aluno;
 import java.util.ArrayList;
@@ -11,6 +12,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.SortedMap;
 import java.util.TreeMap;
+
+//exerc
 
 /**
  *
@@ -35,6 +38,24 @@ public class Exercicio7 {
             classe Carro. 
            Adicione-os em uma lista da interface Map ordenada. Ao adicionar defina uma chave sequencial. Imprima na tela a listagem de carros.
     */
+        SortedMap<String, Carro> map = new TreeMap();
+    
+        Carro a = new Carro("Corsa", 2007, "Chevrolet", 1111777, 12000.5f);
+        Carro b = new Carro("Gol", 2021, "Volkswagen", 4242, 57000.5f);
+        Carro c = new Carro("Fusca", 1994, "Volkswagen", 1122, 11000.0f);
+        Carro d = new Carro("Palio", 2007, "FIAT", 7242, 10000.5f);
+        Carro e = new Carro("208", 2022, "Peugot", 117, 70000.5f);
+        
+        map.put("0", a);
+        map.put("1", b);
+        map.put("2", c);
+        map.put("3", d);
+        map.put("4", e);
+        
+        for (Map.Entry<String, Carro> m : map.entrySet()) {
+        
+            System.out.println("Codigo: "+m.getKey() + " Valor : "+ m.getValue());    
+        }
         
       }    
     

@@ -7,7 +7,10 @@ package br.edu.ifsul.bcc.too.topico3;
  */
 
 public class ManipulacaoStrings {
-        
+    
+    public ManipulacaoStrings() {
+    
+    }
     public static void main(String[] args) {
         
         /*
