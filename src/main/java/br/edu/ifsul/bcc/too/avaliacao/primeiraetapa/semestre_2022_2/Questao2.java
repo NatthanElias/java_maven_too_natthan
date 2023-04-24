@@ -16,12 +16,13 @@ import java.util.Map;
 public class Questao2 {
     private Map<Integer, java.util.Calendar> mapDados = new HashMap();
     private SimpleDateFormat formatadorData;
-    private java.util.Date data_util_date;
+    private java.util.Calendar data_util_date;
     
     private String dadosString = "{codigo:10, data:'2022-01-31'}; {codigo:20, data:'1999-10-1'};{codigo:30, data:'1994-06-15'}";
     
     public Questao2(){
         manipulacaoStrings();
+        mostra();
     }
     private void manipulacaoStrings(){
         String d[] = dadosString.split(";");
@@ -47,8 +48,20 @@ public class Questao2 {
             i++;
         }
     }
+    
+    public void mostra() {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        
+        for(Map.Entry<Integer, Calendar> m : mapDados.entrySet()) {
+            Calendar data = m.getValue();
+            System.out.println("Chave:"+m.getKey() + "Valor: " + sdf.format(data.getTime()));
+        }
+        
+    }
+    
     public static void main(String args[]){
-    new Questao2();
+       new Questao2();
+        
     
     }
     
