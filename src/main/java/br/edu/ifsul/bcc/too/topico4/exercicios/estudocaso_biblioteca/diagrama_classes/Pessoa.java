@@ -13,14 +13,14 @@ import java.util.Calendar;
 public class Pessoa {
     
     public String cpf;
-    String rg;
-    String nome;
-    String logradouro;
-    String cep;
-    Integer numero;
-    String telefone;
-    Calendar data_cadastro;
-    Integer idade;
+    public String rg;
+    public String nome;
+    public String logradouro;
+    public String cep;
+    public Integer numero;
+    public String telefone;
+    public Calendar data_cadastro;
+    public Integer idade;
     
     //Construtor pádrao: protegido e sem parametros
     public Pessoa() {
