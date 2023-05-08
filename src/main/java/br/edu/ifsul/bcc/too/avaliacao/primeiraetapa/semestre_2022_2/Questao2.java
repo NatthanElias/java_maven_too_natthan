@@ -36,6 +36,7 @@ public class Questao2 {
                 String codigo = d[i].substring(d[i].indexOf(":")+1,d[i].indexOf(","));
                 String data = d[i].substring(d[i].indexOf(":",d[i].indexOf(","))+2, d[i].indexOf("'}"));
             
+                System.out.println(data);
                 Calendar x = Calendar.getInstance();
             
                 x.setTimeInMillis(formatadorData.parse(data).getTime());                        
@@ -54,15 +55,13 @@ public class Questao2 {
         
         for(Map.Entry<Integer, Calendar> m : mapDados.entrySet()) {
             Calendar data = m.getValue();
-            System.out.println("Chave:"+m.getKey() + "Valor: " + sdf.format(data.getTime()));
+            System.out.println("Chave:"+m.getKey() + " Valor: " + sdf.format(data.getTime()));
         }
         
     }
     
     public static void main(String args[]){
        new Questao2();
-        
-    
     }
     
 }
