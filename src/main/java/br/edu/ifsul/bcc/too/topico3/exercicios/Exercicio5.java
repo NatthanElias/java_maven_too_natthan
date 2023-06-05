@@ -24,12 +24,13 @@ public class Exercicio5 {
     }
     
     private void manipulaString(){//metodo da classe
-        System.out.println("executou o metodo manipulaDados()");
         
+       
         
     }
     
     public static void main(String args[]){//metodo main
+        
         
         Exercicio5 e5 = new Exercicio5();//objeto da classe
         e5.manipulaString();//chamada do metodo a partir do objeto.

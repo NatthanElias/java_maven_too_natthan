@@ -24,10 +24,13 @@ public class ConversoesDatas {
     
     ConversoesDatas(){
         
-        //testesInicializacao();
-        //  testesImpressao();
+        //    testesInicializacao();
+            testesImpressao();
         //  testesConversao();
-            testesComparacao();        
+        //    testesComparacao();        
+        
+       // imprimeData();
+        
     }
     
     private void testesComparacao(){
@@ -106,7 +109,11 @@ public class ConversoesDatas {
             System.out.println("Data atual: " + System.currentTimeMillis());
             
             data_util_date = new java.util.Date();
-            data_util_date.setTime(formatadorData.parse("19/10/199a 14:30:22").getTime());
+            
+            data_util_date.setTime(formatadorData.parse("19/10/1999 14:30:22").getTime());
+            
+            
+            
             System.out.println("Data java.util.Date        :" + data_util_date);                        
             System.out.println("Data java.util.Date format :" + formatadorData.format(data_util_date.getTime()));
                         
@@ -125,12 +132,32 @@ public class ConversoesDatas {
         }
     }
     
+    
+    private void imprimeData(){
+        
+        //criar uma variável local do tipo java.util.Calendar.        
+        Calendar dt = Calendar.getInstance(new Locale("pt-BR"));
+        
+        //alterar a data (p/ seu aniversário).       
+        dt.set(Calendar.DAY_OF_MONTH, 25);
+        //...
+      
+        
+        //imprimir no formato: "Segunda-feira, 4 Abril 2023 10:18:00 0000".              
+        SimpleDateFormat sdFormato = new SimpleDateFormat("EEEE, d"); 
+        
+        System.out.println(" : "+sdFormato.format(dt.getTimeInMillis()));
+        
+        
+        //documentação:
+        //https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
+        
+    }
+    
     private void testesInicializacao(){
     
         System.out.println("Data atual em milesegundos: " + System.currentTimeMillis());
     
-        
-        
         //inicialização do tipo java.util.Date
         data_util_date = new java.util.Date();
         System.out.println("Data atual via java.util.Date :" + data_util_date);
@@ -141,7 +168,7 @@ public class ConversoesDatas {
         System.out.println("Data atual via java.util.Calendar :" + data_util_calendar);
         
         //inicialização do tipo java.util.Calendar
-        data_sql_date = new java.sql.Date(data_util_calendar.getTimeInMillis());
+        data_sql_date = new java.sql.Date(System.currentTimeMillis());
         //data_sql_date = new java.sql.Date(data_util_date.getTime());
         
         System.out.println("Data atual via java.sql.Date :" + data_sql_date);

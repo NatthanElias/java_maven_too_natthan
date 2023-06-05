@@ -59,13 +59,13 @@ public class Colecoes {
         
     private Map<String, String> mp;
     
-
-    
     //construtor        
     protected Colecoes(){
         
+        
     }
             
+    //construtor 
     public Colecoes(Integer tipo){
         
         // é como um array cujo tamanho pode crescer. A busca de um elemento é rápida, mas inserções e exclusões não são.
@@ -79,19 +79,21 @@ public class Colecoes {
         lst.add(3);
         lst.add(15);//elemento duplicado.
         
+        lst.remove(6);  // remocao de elemento por índice.
+        
         //System.out.println(lst);
+        
         
         for(int i=0; i < lst.size(); i++){
 
             System.out.println("Elemento da List: " + lst.get(i));//List possibilita a recuperacao pelo indice.
         }                        
         //System.out.println("Contem o elemento com o valor 150: " + lst.contains(150));
-        
-        
+              
     }
     
-    public Colecoes(String tipo){
-        
+    //construtor 
+    public Colecoes(String tipo){        
         //Se a necessidade for um conjunto com elementos não duplicados e acesso em ordem natural
         st = new TreeSet();
         
@@ -101,27 +103,34 @@ public class Colecoes {
         st.add("Belgica");
         st.add("Japão");
         st.add("Brasil");               
-                
-                
-        for( Object o : st){
+        //st.add(100);
+        
+        for( Object o : st){            
+            // casting : modelagem de Object para String
             
-            System.out.println("Elemento do Set: "+ (String)  o);
-        }                        
+            System.out.println("Elemento do Set: " + (String)  o );
+        }      
+        
     }
+    
     
     public void metodoHashmap(){
         
         // Escolha esta implementação se a ordenação não for importante e desejar uma estrutura onde seja necessário um ID (identificador). 
         mp = new HashMap();
+        
         mp.put("id", "1");
         mp.put("uz", "0000134");
         mp.put("cpf", "0000134");
         mp.put("id", "100000");
         
+        /*
         for (Map.Entry<String, String> m : mp.entrySet()) {        
             System.out.println("Chave "+m.getKey() + " Valor : "+ m.getValue());    
         } 
-        System.out.println("chave uz: " + mp.get("uz")); 
+        */
+        
+        System.out.println("chave uz: " + mp.get("id")); 
     }
     
     public void metodoClassificacaoMap(){
@@ -130,10 +139,10 @@ public class Colecoes {
         SortedMap<String, Aluno> map = new TreeMap();
         
         
-        map.put("2" , new Aluno("456a","junior"));
+        map.put("0" , new Aluno("456a","junior"));
         map.put("1" , new Aluno("789a","fulano"));
         map.put("0" , new Aluno("789a","abel"));
-        map.put("-1" , new Aluno("789a","abel"));
+        map.put("50" , new Aluno("789a","abel"));
         map.put("3" , new Aluno("123a","telmo"));
         
         
@@ -143,40 +152,58 @@ public class Colecoes {
         }         
         
     }
-        
+      
+    
     public void metodoClassificacao(){
         
-        List<Aluno> list = new ArrayList();
+        java.util.List<Aluno> list = new ArrayList();//criando a variavel list.
         
-        Aluno a = new Aluno("pf009","telmo");
+        Aluno a = new Aluno("pf009","telmo");// criacao do objeto/variavael a do tipo Aluno.
         list.add(a);
         
-        Aluno b = new Aluno("pf002","fulano");
+        Aluno b = new Aluno("pf002","junior");
         list.add(b);
         
-        Aluno c = new Aluno("pf003","junior");
+        Aluno c = new Aluno("pf003","fulano");
         list.add(c);
         
-        System.out.println(list);
+        Aluno d = new Aluno("pf000","Abel");
+        list.add(d);
         
-        Collections.sort(list);
+        Aluno e = new Aluno("pf01", "Ciclano");//criando a instancia a partir do construtor sem parâmetros.
+        list.add(e);
         
-        System.out.println(list);
+        System.out.println(list);//antes
+               
+        Collections.sort(list);//classificacao com base na método compareTo                
+        
+        System.out.println(list);//depois
         
     }
     
     
     public static void main(String[] args) {
         
-      new Colecoes().metodoClassificacaoMap();
+        //criacao da instância invoncando o construtor que recebe um integer.
+       // new Colecoes(0);
         
-      // new Colecoes().metodoClassificacao();
-        
-      //  Colecoes c = new Colecoes(0);
-        
-        //c.metodoHashmap();
-        
-     //   new Colecoes().metodoHashmap();
+       //criacao da instância invocando o construtor que recebe uma String.        
+       //new Colecoes("");
+       
+       //criacao da instância invocando o construtor sem parâmetros e chama o método metodoHashmap.
+       //new Colecoes().metodoHashmap(); 
+       //Colecoes c = new Colecoes();
+       //c.metodoHashmap();
+       
+       //Colecoes c = new Colecoes();
+       //c.metodoClassificacao();
+       
+       // ou        
+       //new Colecoes().metodoClassificacao();        
+      
+       
+       new Colecoes().metodoClassificacaoMap();
+       
      
      
     }

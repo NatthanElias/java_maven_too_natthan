@@ -1,7 +1,6 @@
 
 package br.edu.ifsul.bcc.too.topico3.exercicios;
 
-import br.edu.ifsul.bcc.too.topico3.exercicios.respostas.Carro;
 import br.edu.ifsul.bcc.too.topico3.Colecoes;
 import br.edu.ifsul.bcc.too.topico3.util.Aluno;
 import java.util.ArrayList;
@@ -12,8 +11,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.SortedMap;
 import java.util.TreeMap;
-
-//exerc
 
 /**
  *
@@ -26,9 +23,14 @@ public class Exercicio7 {
         exer71();// chama o método exer71.
        
         exer72();//chama o método exer72.
+        
+        
     }
     
     private void exer71(){
+        
+       
+        
         
     /*
         7.1) Codifique uma classe chamada: Carro. Essa classe deve ter os seguintes atributos: nome, modelo, fabricante, numero do chassi  e valor de mercado. 
@@ -38,24 +40,6 @@ public class Exercicio7 {
             classe Carro. 
            Adicione-os em uma lista da interface Map ordenada. Ao adicionar defina uma chave sequencial. Imprima na tela a listagem de carros.
     */
-        SortedMap<String, Carro> map = new TreeMap();
-    
-        Carro a = new Carro("Corsa", 2007, "Chevrolet", 1111777, 12000.5f);
-        Carro b = new Carro("Gol", 2021, "Volkswagen", 4242, 57000.5f);
-        Carro c = new Carro("Fusca", 1994, "Volkswagen", 1122, 11000.0f);
-        Carro d = new Carro("Palio", 2007, "FIAT", 7242, 10000.5f);
-        Carro e = new Carro("208", 2022, "Peugot", 117, 70000.5f);
-        
-        map.put("0", a);
-        map.put("1", b);
-        map.put("2", c);
-        map.put("3", d);
-        map.put("4", e);
-        
-        for (Map.Entry<String, Carro> m : map.entrySet()) {
-        
-            System.out.println("Codigo: "+m.getKey() + " Valor : "+ m.getValue());    
-        }
         
       }    
     
@@ -64,7 +48,7 @@ public class Exercicio7 {
            O construtor (público) deverá receber dados para inicializar todos esses atributos. Sobrescreva o método toString para retornar o codigo e modelo.
            Na classe Exercicio7 crie um novo método para realizar os seguintes procedimentos: criar e inicializar quatro objetos da classe Pneu. 
            Adicione-os em uma lista. Implemente um mescanismo para classificar os objetos contidos nessa lista pelo modelo (descendente).
-           Imprima na tela dos Pneus.
+           Imprima na tela os Pneus.
     */
     
     private void exer72(){

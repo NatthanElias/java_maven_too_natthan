@@ -7,13 +7,16 @@ package br.edu.ifsul.bcc.too.topico3;
  */
 public class TratamentoExcecoes {
     
-    static String strValor1 = "123";
-        
+    //atributo - atributo de instÂncia.
+    public static String strValor1 = "123";
+    
+    //atributo da classe
     static String strValor2 = "123a";
         
     static String strValor3 = "10.5";
     
     
+   
     public static void main(String[] args) {
         
         /* Tratamento de exceções:
@@ -51,6 +54,7 @@ public class TratamentoExcecoes {
         //System.out.println(iConversaoValor);
                     
         try{
+            
             Integer iConversaoValor = Integer.parseInt(strValor2);
         
             System.out.println(iConversaoValor);
@@ -63,6 +67,7 @@ public class TratamentoExcecoes {
         }catch(Exception e){       
             System.out.println("Erro ao converter a string: "+strValor2);
             e.printStackTrace();
+            //e.getLocalizedMessage();
             
         }
         

@@ -1,6 +1,8 @@
 
 package br.edu.ifsul.bcc.too.topico3;
 
+import java.lang.String;
+
 /**
  *
  * @author telmo
@@ -8,9 +10,7 @@ package br.edu.ifsul.bcc.too.topico3;
 
 public class ManipulacaoStrings {
     
-    public ManipulacaoStrings() {
-    
-    }
+        
     public static void main(String[] args) {
         
         /*
